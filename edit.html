@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Product</title>
+	<title>About</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -22,12 +22,6 @@
 	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
 <!--===============================================================================================-->
@@ -84,12 +78,8 @@
 							<li>
 								<a href="review.html">Review</a>
 							</li>
-
-							
 						</ul>
 					</div>	
-
-					
 
 					<!-- Icon header -->
 					<div class="wrap-icon-header flex-w flex-r-m">
@@ -283,28 +273,94 @@
 		</div>
 	</div>
 
-	<div class="container">
-			<div class="center"><h1>PRODUCT</h1>
-			<a href="add.html" class="btn btn-default">Add New Product</a>
-			<a href="edit2.html" class="btn btn-default">Edit</a>
-			<table class="table table-hover">
-				<thead>
-				  <tr>
-					<th></th>
-					<th></th>
-					<th>Name</th>
-					<th>Price</th>
-					<th>Weight</th>
-					
-				  </tr>
-				</thead>
-				<tbody id="productlist"></tbody>
-			  </table>        
-		</div>
+    <div class="transbox">
+        <div class="container">
+            <br>
+            <br>
+            <h1 class="display-3">
+                <font color="white">Edit Product</font>
+            </h1>
+            <div class="form-group">
+                <label for="photo">Photo (URL Only):</label>
+                <input type="text" class="form-control" id="photo">
+            </div>
+
+            <div class="form-group">
+                <label for="Name">Name:</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+                <label for="desc">Description:</label>
+                <input type="text" class="form-control" id="desc">
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="text" class="form-control" id="price">
+            </div>
+
+            <div class="form-group">
+                <button id="saveni" class="btn btn-primary">Save</button>
+                <button id="modal-delete" data-toggle="modal" data-target="#myModal" class="btn btn-danger">Delete</button>
+                <a href="edit2.html" class="btn btn-default">Back</a>
+            </div>
+            <div class="form-group">
+                <div id="alert" class="alert alert-success alert-dismissible fade show">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Success!</strong> Product was saved
+
+                </div>
+            </div>
+            <br>
+            <br>
+        </div>
+        </div>
+
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Confirm Delete to Delete Product</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        The deleted cannot be recovered!
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button id="delete" type="button" class="btn btn-danger" data-dismiss="modal">Delete Anyway</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+            <script src="js/vendor/jquery-2.2.4.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+            <script src="js/vendor/bootstrap.min.js"></script>
+            <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+            <script src="js/easing.min.js"></script>
+            <script src="js/hoverIntent.js"></script>
+            <script src="js/superfish.min.js"></script>
+            <script src="js/jquery.ajaxchimp.min.js"></script>
+            <script src="js/jquery.magnific-popup.min.js"></script>
+            <script src="js/owl.carousel.min.js"></script>
+            <script src="js/jquery.nice-select.min.js"></script>
+            <script src="js/mail-script.js"></script>
+            <script src="js/main.js"></script>
+
+            <script src="edit.js"></script>
 
 		
 
-		
 
 <!--===============================================================================================-->	
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -324,70 +380,7 @@
 		})
 	</script>
 <!--===============================================================================================-->
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/slick/slick.min.js"></script>
-	<script src="js/slick-custom.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/parallax100/parallax100.js"></script>
-	<script>
-        $('.parallax100').parallax100();
-	</script>
-<!--===============================================================================================-->
 	<script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
-	<script>
-		$('.gallery-lb').each(function() { // the containers for all your galleries
-			$(this).magnificPopup({
-		        delegate: 'a', // the selector for gallery item
-		        type: 'image',
-		        gallery: {
-		        	enabled:true
-		        },
-		        mainClass: 'mfp-fade'
-		    });
-		});
-	</script>
-<!--===============================================================================================-->
-	<script src="vendor/isotope/isotope.pkgd.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/sweetalert/sweetalert.min.js"></script>
-	<script>
-		$('.js-addwish-b2, .js-addwish-detail').on('click', function(e){
-			e.preventDefault();
-		});
-
-		$('.js-addwish-b2').each(function(){
-			var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
-			$(this).on('click', function(){
-				swal(nameProduct, "is added to wishlist !", "success");
-
-				$(this).addClass('js-addedwish-b2');
-				$(this).off('click');
-			});
-		});
-
-		$('.js-addwish-detail').each(function(){
-			var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
-
-			$(this).on('click', function(){
-				swal(nameProduct, "is added to wishlist !", "success");
-
-				$(this).addClass('js-addedwish-detail');
-				$(this).off('click');
-			});
-		});
-
-		/*---------------------------------------------*/
-
-		$('.js-addcart-detail').each(function(){
-			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
-			$(this).on('click', function(){
-				swal(nameProduct, "is added to cart !", "success");
-			});
-		});
-	
-	</script>
 <!--===============================================================================================-->
 	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 	<script>
@@ -407,6 +400,7 @@
 	</script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
-   <script src="index.js"></script>
+    <script src="edit.js"></script>   
+     <script src="edit2.js"></script>
 </body>
 </html>
